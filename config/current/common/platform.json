@@ -1,0 +1,37 @@
+{
+   "_comment":"It will contain the platform details where this is working",
+   "os":"windows",
+   "python_ver":"2.7",
+   "role":"endpoint",
+   "board_type":"udo",
+   "capture":
+   {
+   		"status" : "true",
+   		"transport": "tls",
+   		"interface" : "eth0.10"
+   },
+   "messaging":
+   {
+       "protocol":"mqtt",
+       "mqtt": {
+       				"subtopic":
+       				{
+       					"request" : "control",
+       					"response" : "response",
+       					"notify" : "alarm"
+       				},
+       				"broker_ip":"52.38.175.21",
+   				"broker_port":"1883",
+   				"broker_keepalive":60,
+   				"transport":"tcp",
+   				"username":"vnej",
+   				"password":"abcd1234",
+   				"clean_session":1,
+   				"userdata":"",
+   				"cert_directory":"certs",
+   				"ca_cert":"ca.cert",
+   				"client_cert":"client.cert",
+   				"client_key":"client.key" 
+   		}       
+    }
+}
